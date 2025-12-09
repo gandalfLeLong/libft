@@ -107,6 +107,6 @@ libft/
 
 👤 Author
 
-Your Name
-42 Paris — Cohort XX
-GitHub: @your-username
+Charlie Mathot
+42 Belgium
+GitHub: @gandalfLeLong
