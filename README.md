@@ -1,112 +1,31 @@
-# libft
-📚 Libft
+# Libft
 
-Libft is the first project of the 42 School curriculum.
-The goal is to re-create a personal C standard library by implementing a set of essential functions for memory management, strings, linked lists, and more.
-This library becomes a base for all future 42 projects and reinforces C fundamentals: pointers, memory usage, data manipulation, and clean code.
+The first project at 42. This project involves recoding a set of standard C library functions, as well as additional utility functions that will be reused in future projects.
 
-🚀 Features
-🔧 Part 1 — Standard C Functions
+---
 
-Re-implementation of key libc functions:
+### 💡 Key Features
+* **Standard Libc:** Re-implementation of functions like `strlen`, `memcpy`, `atoi`, and `strdup`.
+* **String/Memory Utils:** Custom functions for string manipulation (`ft_split`, `ft_strjoin`) and memory allocation (`ft_calloc`).
+* **Linked Lists:** Bonus implementation of a linked list data structure and its management functions.
+* **Constraints:** No use of global variables; strictly following the 42 Norm.
 
-memset, bzero, memcpy, memmove, memchr, memcmp
+---
 
-strlen, strlcpy, strlcat
+### 🛠️ Compilation & Usage
 
-strchr, strrchr, strnstr, strncmp
+The project includes a **Makefile** with the following rules:
 
-toupper, tolower
+| Rule | Description |
+| :--- | :--- |
+| `make` | Compiles the core mandatory source files into `libft.a`. |
+| `make bonus` | Compiles the core functions AND the linked list utility functions. |
+| `make clean` | Removes object files (`.o`). |
+| `make fclean` | Removes object files and the static library file. |
+| `make re` | Performs a full re-compile. |
 
-atoi
-
-calloc, strdup
-
-🛠️ Part 2 — Additional Utility Functions
-
-Useful high-level helpers:
-
-ft_substr
-
-ft_strjoin
-
-ft_strtrim
-
-ft_split
-
-ft_itoa
-
-ft_strmapi, ft_striteri
-
-ft_putchar_fd, ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd
-
-🌿 Bonus — Linked List Utilities (t_list)
-
-ft_lstnew
-
-ft_lstadd_front, ft_lstadd_back
-
-ft_lstsize, ft_lstlast
-
-ft_lstdelone, ft_lstclear
-
-ft_lstiter, ft_lstmap
-
-📦 Installation
-
-Clone the repository and compile the library:
-
-git clone https://github.com/<your-username>/libft.git
-cd libft
-make
-
-
-This will create libft.a.
-
-🧩 Usage
-
-Include the library in your C project:
-
-#include "libft.h"
-
-
-Compile with:
-
-gcc your_file.c -L. -lft
-
-
-Or in a Makefile:
-
-LIBFT = ./libft/libft.a
-
-$(NAME): $(OBJ)
-	CC $(OBJ) $(LIBFT) -o $(NAME)
-
-🧪 Testing
-
-You can test with your own main files or with community testers:
-
-libft-unit-test
-
-libft-war-machine
-
-Francinette (42 tester)
-
-🏗️ Project Structure
-libft/
-├── Makefile
-├── libft.h
-├── ft_*.c
-└── bonus/
-
-🏁 Status
-
-✔️ Completed
-📍 Norminette compliant
-📼 Used as base for all following 42 projects
-
-👤 Author
-
-Charlie Mathot
-42 Belgium
-GitHub: @gandalfLeLong
+**To use in your code:**
+1. Include the header: `#include "libft.h"`
+2. Compile your program with the library:
+```bash
+cc main.c libft.a -o my_program
